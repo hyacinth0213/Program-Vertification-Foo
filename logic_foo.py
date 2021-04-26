@@ -20,7 +20,7 @@ def build_solver():
 	solver.add(Implies(Not(d),Or(e,g)))
 	solver.add(Implies(And(Not(g),h),c))
 	solver.add(Implies(h, Not(g)))
-	solver.add(Implies(And(Or(And(a,Not(d)),And(Not(a),d)),Not(b)),f))
+	solver.add(Implies(And(Xor(a, d),Not(b)),f))
 	solver.add(Implies(And(And(a, Not(c)),f), Not(g)))
 	solver.add(Implies(Not(e),h))
 
